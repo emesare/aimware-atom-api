@@ -7,7 +7,7 @@
       "lua",
       "snippets"
   ],
-  "repository": "https://github.com/Dankkkk/aimware-api",
+  "repository": "https://github.com/Dankkkk/aimware-atom-api",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

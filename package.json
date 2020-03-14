@@ -1,11 +1,11 @@
 {
   "name": "aimware-api",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Aimware API Implementation into atom",
   "keywords": [
-      "aimware",
-      "lua",
-      "snippets"
+    "aimware",
+    "lua",
+    "snippets"
   ],
   "repository": "https://github.com/Dankkkk/aimware-atom-api",
   "license": "MIT",

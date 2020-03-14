@@ -1,18 +1,16 @@
 {
   "name": "aimware-api",
-  "main": "./lib/aimware-api",
   "version": "1.3.0",
   "description": "Aimware API Implementation into atom",
   "keywords": [
+      "aimware",
+      "lua",
+      "snippets"
   ],
-  "activationCommands": {
-    "atom-workspace": "aimware-api:toggle"
-  },
-  "repository": "https://github.com/atom/aimware-api",
+  "repository": "https://github.com/Dankkkk/aimware-api",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

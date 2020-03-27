@@ -1,5 +1,5 @@
-# Generated with Atomizr – https://atom.io/packages/atomizr
-".source":
+# by Dankkkk (discord: Dank#0069)
+".source.lua":
 	LoadScript:
 		prefix: "LoadScript"
 		body: [
@@ -643,8 +643,8 @@
 		]
 		description: "Run javascript in the context of CSGO panorama UI."
 	Vector3:
-		prefix: "Vector"
+		prefix: "Vector3"
 		body: [
-			"Vector( x, y, z )"
+			"Vector3( x, y, z )"
 		]
 		description: "create a 3d vector"

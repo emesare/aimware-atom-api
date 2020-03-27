@@ -1,7 +1,10 @@
-".source.lua":
-	RunScript:
+# Generated with Atomizr – https://atom.io/packages/atomizr
+".source":
+	LoadScript:
 		prefix: "LoadScript"
-		body: ["LoadScript( scriptFile )"]
+		body: [
+			"LoadScript( scriptFile )"
+		]
 		description: "Loads script from file."
 	UnloadScript:
 		prefix: "UnloadScript"
@@ -204,21 +207,39 @@
 	"draw.RoundedRect":
 		prefix: "draw.RoundedRect"
 		body: [
-			"draw.RoundedRect( x1, y1, x2, y2 )"
+			"draw.RoundedRect( x1, y1, x2, y2, radius, tl, tr, bl, br )"
 		]
-		description: "Draw rounded rectangle with top left point at x1, y1 and bottom right point at x2, y2."
+		description: "Draw rounded rectangle with top left point at x1, y1 and bottom right point at x2, y2 radius = radius of roundness tl = round top left corner tr = round top right corner bl = round bottom left corner br = round bottom right corner."
 	"draw.RoundedRectFill":
 		prefix: "draw.RoundedRectFill"
 		body: [
-			"draw.RoundedRectFill( x1, y1, x2, y2 )"
+			"draw.RoundedRectFill( x1, y1, x2, y2, radius, tl, tr, bl, br )"
 		]
 		description: "Draw rounded and filled rectangle with top left point at x1, y1 and bottom right point at x2, y2."
+	"draw.ShadowRect":
+		prefix: "draw.ShadowRect"
+		body: [
+			"draw.ShadowRect( x1, y1, x2, y2, radius )"
+		]
+		description: "Draw shadow rectangle."
 	"draw.Triangle":
 		prefix: "draw.Triangle"
 		body: [
 			"draw.Triangle( x1, y1, x2, y2, x3, y3 )"
 		]
 		description: "Draw filled triangle."
+	"draw.FilledCircle":
+		prefix: "draw.FilledCircle"
+		body: [
+			"draw.FilledCircle( x, y, radius )"
+		]
+		description: "Draw filled circle."
+	"draw.OutlinedCircle":
+		prefix: "draw.OutlinedCircle"
+		body: [
+			"draw.OutlinedCircle( x, y, radius )"
+		]
+		description: "Draw outlined circle."
 	"draw.GetTextSize":
 		prefix: "draw.GetTextSize"
 		body: [
@@ -330,7 +351,7 @@
 	"gui.Slider":
 		prefix: "gui.Slider"
 		body: [
-			"gui.Slider( parent, varname, name, value, min, max )"
+			"gui.Slider( parent, varname, name, value, min, max, step )"
 		]
 		description: "Gui slider."
 	"gui.Keybox":
@@ -436,29 +457,47 @@
 		]
 		description: "Return accumulated mouse scroll value."
 	"engine.TraceLine":
-		prefix: "input.TraceLine"
+		prefix: "engine.TraceLine"
 		body: [
-			"input.TraceLine( x1, y1, z1, x2, y2, z2, mask )"
+			"engine.TraceLine( src:Vector3, dst:Vector3, mask:integer )"
 		]
-		description: "Traces line from point xyz1 to point xyz2, returns: contents, fraction, entity"
-	"engine.GetPointContents":
-		prefix: "input.GetPointContents"
+		description: "Traces line from src to dst, returns Trace class"
+	"engine.TraceHull":
+		prefix: "engine.TraceHull"
 		body: [
-			"input.GetPointContents( x, y, z )"
+			"engine.TraceHull( src:Vector3, dst:Vector3, mins:Vector3, maxs:Vector3, mask:integer )"
+		]
+		description: "Traces hull from src to dst, returns Trace class"
+	"engine.GetPointContents":
+		prefix: "engine.GetPointContents"
+		body: [
+			"engine.GetPointContents( x, y, z )"
 		]
 		description: "Checks if given point is inside wall, returns contents"
 	"engine.GetMapName":
-		prefix: "input.GetMapName"
+		prefix: "engine.GetMapName"
 		body: [
-			"input.GetMapName()"
+			"engine.GetMapName()"
 		]
 		description: "returns: map name"
 	"engine.GetServerIP":
-		prefix: "input.GetServerIP"
+		prefix: "engine.GetServerIP"
 		body: [
-			"input.GetServerIP()"
+			"engine.GetServerIP()"
 		]
 		description: "returns: server ip"
+	"engine.GetViewAngles":
+		prefix: "engine.GetViewAngles"
+		body: [
+			"engine.GetViewAngles()"
+		]
+		description: "returns: vector3 for view angles"
+	"engine.SetViewAngles":
+		prefix: "engine.SetViewAngles"
+		body: [
+			"engine.SetViewAngles( EulerAngles )"
+		]
+		description: "Sets view angles"
 	"file.Open":
 		prefix: "file.Open"
 		body: [
@@ -603,3 +642,9 @@
 			"panorama.RunScript( js )"
 		]
 		description: "Run javascript in the context of CSGO panorama UI."
+	Vector3:
+		prefix: "Vector"
+		body: [
+			"Vector( x, y, z )"
+		]
+		description: "create a 3d vector"

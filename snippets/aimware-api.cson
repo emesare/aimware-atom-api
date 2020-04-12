@@ -311,19 +311,19 @@
 		]
 		description: "Time since cheat was loaded (in seconds, high precision)"
 	"common.DecodePNG":
-		prefix: "draw.DecodePNG"
+		prefix: "common.DecodePNG"
 		body: [
 			"common.DecodePNG( pngdata )"
 		]
 		description: "returns: rgba, width, height"
 	"common.DecodeJPEG":
-		prefix: "draw.DecodeJPEG"
+		prefix: "common.DecodeJPEG"
 		body: [
 			"common.DecodePNG( jpegdata )"
 		]
 		description: "returns: rgba, width, height"
 	"common.RasterizeSVG":
-		prefix: "draw.RasterizeSVG"
+		prefix: "common.RasterizeSVG"
 		body: [
 			"common.RasterizeSVG( svgdata, scale )"
 		]

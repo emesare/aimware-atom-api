@@ -110,7 +110,7 @@
 	"client.GetConVar":
 		prefix: "client.GetConVar"
 		body: [
-			"client.SetConVar( name )"
+			"client.GetConVar( name )"
 		]
 		description: "Get game convar."
 	"globals.TickInterval":
